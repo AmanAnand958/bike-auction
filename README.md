@@ -1,15 +1,16 @@
 # Bike Auction Platform 🏍️
 
+editied
 This is my MTech internship assignment — a web platform where users can bid on used motorcycles in live auctions. Admins can create and manage auctions. Built over a weekend, kept simple on purpose.
 
 ## Documentation
 
-| Document | Description |
-|----------|-------------|
-| [SETUP.md](./docs/SETUP.md) | Local development setup from scratch |
-| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | System design, DB schema, API design |
-| [DEPLOYMENT.md](./docs/DEPLOYMENT.md) | Deploy to Render + Vercel (free) |
-| [ASSUMPTIONS.md](./docs/ASSUMPTIONS.md) | Design decisions and trade-offs |
+| Document                                  | Description                             |
+| ----------------------------------------- | --------------------------------------- |
+| [SETUP.md](./docs/SETUP.md)               | Local development setup from scratch    |
+| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | System design, DB schema, API design    |
+| [DEPLOYMENT.md](./docs/DEPLOYMENT.md)     | Deploy to Render + Vercel (free)        |
+| [ASSUMPTIONS.md](./docs/ASSUMPTIONS.md)   | Design decisions and trade-offs         |
 | [IMPROVEMENTS.md](./docs/IMPROVEMENTS.md) | Future improvements and scaling roadmap |
 
 ---
@@ -33,12 +34,13 @@ This is my MTech internship assignment — a web platform where users can bid on
 ## Default Seed Credentials
 
 If you ran `npm run seed` (or the database seeder), you can log in with:
-* **Admin User**:
-  * Email: `admin@bikeauction.com`
-  * Password: `admin123`
-* **Regular Users**:
-  * Email: `rohit@gmail.com`, `priya@gmail.com`, or `amit@gmail.com`
-  * Password: `user123`
+
+- **Admin User**:
+  - Email: `admin@bikeauction.com`
+  - Password: `admin123`
+- **Regular Users**:
+  - Email: `rohit@gmail.com`, `priya@gmail.com`, or `amit@gmail.com`
+  - Password: `user123`
 
 ## Folder Structure
 
@@ -63,6 +65,7 @@ bike-auction/
 ## Setup
 
 ### Prerequisites
+
 - Node.js (v18+)
 - PostgreSQL running locally
 
@@ -121,18 +124,18 @@ There are ~13 integration tests covering auth, auctions, and bids.
 
 ## API Endpoints
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| POST | /api/auth/register | No | Register new user |
-| POST | /api/auth/login | No | Login, get JWT |
-| GET | /api/auctions | No | List auctions (filter by ?status=) |
-| GET | /api/auctions/:id | No | Auction detail + bids |
-| POST | /api/auctions | Admin | Create auction |
-| PUT | /api/auctions/:id | Admin | Edit auction (upcoming only) |
-| POST | /api/auctions/:id/close | Admin | Manually close auction |
-| POST | /api/auctions/:id/bids | User | Place a bid |
-| GET | /api/auctions/:id/bids | No | Get bid history |
-| GET | /api/users/me | User | My profile + bid history |
+| Method | Endpoint                | Auth  | Description                        |
+| ------ | ----------------------- | ----- | ---------------------------------- |
+| POST   | /api/auth/register      | No    | Register new user                  |
+| POST   | /api/auth/login         | No    | Login, get JWT                     |
+| GET    | /api/auctions           | No    | List auctions (filter by ?status=) |
+| GET    | /api/auctions/:id       | No    | Auction detail + bids              |
+| POST   | /api/auctions           | Admin | Create auction                     |
+| PUT    | /api/auctions/:id       | Admin | Edit auction (upcoming only)       |
+| POST   | /api/auctions/:id/close | Admin | Manually close auction             |
+| POST   | /api/auctions/:id/bids  | User  | Place a bid                        |
+| GET    | /api/auctions/:id/bids  | No    | Get bid history                    |
+| GET    | /api/users/me           | User  | My profile + bid history           |
 
 ## Deploying (Render + Vercel)
 
